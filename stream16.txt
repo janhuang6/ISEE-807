@@ -1,0 +1,40 @@
+BENCHMARK_NVTX: False
+BENCHMARK_NON_NVTX: True
+📊 Starting DeepStream stress-test profiling at 20250627_162359
+
+▶️  Profiling with 16 stream(s)…
+   • VIDEO_CONFIG_JSON=/videos/video_16.json
+   • N_STREAM=16
+Device Number: 0
+Device name: NVIDIA L4
+Device Version 8.9
+  Device Supports Optical Flow Functionality
+
+gst_ds_optical_flow_set_caps: Creating OpticalFlow Context for Source = 0
+libnvds_opticalflow_dgpu: Setting GPU_ID = 0
+nvstreammux: Successfully handled EOS for source_id=0
+****************** BENCHMARK_NON_NVTX is not none
+****************** attach_latency
+****************** attach_gpu
+==========******************* dump csv folder output
+[cpu-probe-simple] No samples captured—CSV not written.
+Now playing...
+0 :  deepstream-opticalflow-minimal-with-e2e.py
+Starting pipeline 
+
+[PERF] e2e throughput: 81.26 FPS | nvof throughput: 80.77 FPS | latency_ms_mean: 3.16 ms | latency_ms_min: 0.83 ms | latency_ms_max: 5.89 ms | latency_ms_50: 3.15 ms | latency_ms_90: 3.24 ms | latency_ms_95: 3.27 ms
+[PERF] e2e throughput: 201.32 FPS | nvof throughput: 200.71 FPS | latency_ms_mean: 3.17 ms | latency_ms_min: 3.04 ms | latency_ms_max: 6.92 ms | latency_ms_50: 3.14 ms | latency_ms_90: 3.25 ms | latency_ms_95: 3.35 ms
+End-of-stream
+Exiting app
+
+Generating '/tmp/nsys-report-2196.qdstrm'
+[1/1] [0%                          ] deepstream_profile_20250627_162359_16.nsys-rep[1/1] [0%                          ] deepstream_profile_20250627_162359_16.nsys-rep[1/1] [7%                          ] deepstream_profile_20250627_162359_16.nsys-rep[1/1] [======33%                   ] deepstream_profile_20250627_162359_16.nsys-rep[1/1] [==============62%           ] deepstream_profile_20250627_162359_16.nsys-rep[1/1] [=====================87%    ] deepstream_profile_20250627_162359_16.nsys-rep[1/1] [=====================89%    ] deepstream_profile_20250627_162359_16.nsys-rep[1/1] [========================100%] deepstream_profile_20250627_162359_16.nsys-rep[1/1] [========================100%] deepstream_profile_20250627_162359_16.nsys-rep
+Generated:
+    /Benchmark_example/ISee-Deepstream-Service/profiling/profiles_20250627_162359/deepstream_profile_20250627_162359_16.nsys-rep
+✅  Completed profiling 16 stream(s).
+
+🎉 All profiles complete.
+
+📈 Processing profiling results and generating CSVs…
+Benchmarking NVTX is disabled. Exiting.
+🏁 All processing complete!
